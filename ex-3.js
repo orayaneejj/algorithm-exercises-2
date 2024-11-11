@@ -1,5 +1,10 @@
 function validatePIN(pin) {
-  //Start coding here
+  const regex = /^\d+$/;
+  if (regex.test(pin) && (pin.length === 4 || pin.length === 6)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 let result1 = validatePIN("1234");
